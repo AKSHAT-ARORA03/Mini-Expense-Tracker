@@ -1,0 +1,135 @@
+/* Login Page Container */
+.login-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, #00ccff, #7321bc);
+  background-size: 200% 200%;
+  animation: gradientAnimation 6s ease infinite alternate;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Animated Background */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Logo Styling */
+.login-page img {
+  width: 220px;
+  height: auto;
+  margin-bottom: 15px;
+  animation: fadeInLogo 1.5s ease-in-out;
+}
+
+@keyframes fadeInLogo {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Welcome Text */
+.login-page h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  animation: fadeInText 1.5s ease-in-out 0.5s forwards;
+  opacity: 0;
+}
+
+.login-page p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInText 1.5s ease-in-out 1s forwards;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Google Sign-In Button */
+.login-with-google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeInButton 1.5s ease-in-out 1.5s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInButton {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-with-google-btn:hover {
+  background-color: #f8f8f8;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+.login-with-google-btn:active {
+  background-color: #ebebeb;
+  transform: scale(0.98);
+}
+
+.login-with-google-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #c8dafc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-page h1 {
+    font-size: 28px;
+  }
+  
+  .login-page p {
+    font-size: 16px;
+  }
+
+  .login-with-google-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
